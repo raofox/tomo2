@@ -16,6 +16,7 @@ module Tomo2
     # -- all .rb files in that directory are automatically loaded.
     config.generators.assets = false
     config.generators.helper = false
+    config.assets.initialize_on_precompile = false
 
   end
 end

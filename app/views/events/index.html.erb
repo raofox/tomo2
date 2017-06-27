@@ -32,17 +32,17 @@
     <div class="col-xs-8 col-sm-5 col-md-5 col-lg-5" id="event-card">
       <div class="row">
         <div class="col-xs-8 col-sm-5 col-md-5 col-lg-5" id="event-img">
-         <% if event.category.name == "FOOD" %>
+         <% if event.category.name == "Food" %>
             <label id="cat"><p><i class="fa fa-cutlery" aria-hidden="true"></i> <%= event.category.name %></p></label>
-        <% elsif event.category.name == "SPORTS" %>
+        <% elsif event.category.name == "Sports" %>
            <label id="cat"><p><i class="fa fa-bicycle" aria-hidden="true"></i> <%= event.category.name %></p></label>
-        <% elsif event.category.name == "ENTERTAINMENT" %>
+        <% elsif event.category.name == "Entertainment" %>
            <label id="cat"><p><i class="fa fa-television" aria-hidden="true"></i> <%= event.category.name %></p></label>
-        <% elsif event.category.name == "WORK" %>
+        <% elsif event.category.name == "Work" %>
             <label id="cat"><p><i class="fa fa-briefcase" aria-hidden="true"></i> <%= event.category.name %></p></label>
-        <% elsif event.category.name == "CHARITY" %>
+        <% elsif event.category.name == "Charity" %>
              <label id="cat"><p><i class="fa fa-user-o" aria-hidden="true"></i> <%= event.category.name %></p></label>
-         <% elsif event.category.name == "TRAVEL" %>
+         <% elsif event.category.name == "Travel" %>
         <label id="cat"><p><i class="fa fa-car" aria-hidden="true"></i> <%= event.category.name %></p></label>
 
          <!--  <label id="cat"><p> <%= event.category.name %> </p></label> -->
@@ -70,7 +70,7 @@
               </div>
             <div id="event-info">
               <div class="icon"><i class="fa fa-map-marker" aria-hidden="true" style="font-size:40px;color:#2e2e2e;margin-left: 10px;margin-top:3px;padding:5px;"></i><span id="event-place"><%= event.venue %></span></div>
-              <div class="icon"><i class="fa fa-clock-o" aria-hidden="true" style="font-size:40px;color:#2e2e2e;margin-left: 4px;padding:5px;"></i><span id="event-time"><%= event.event_time.strftime("%I:%M %p")%></span></div>
+              <div class="icon"><i class="fa fa-clock-o" aria-hidden="true" style="font-size:40px;color:#2e2e2e;margin-left: 4px;padding:5px;"></i><span id="event-time"><%= event.event_time.utc.strftime("%I:%M %p")%></span></div>
               <div class="icon"><i class="fa fa-users" aria-hidden="true" style="font-size:40px;color:#2e2e2e;margin-left: 2px;padding:5px;"></i><span id="event-guest"><%= event.guests.count + 1 %> </span></div>
             </div>
           </div>

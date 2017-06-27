@@ -21,5 +21,5 @@ namespace :api do
     end
 end
 
-root 'page#index' 
+root 'events#index' 
 end
